@@ -1,0 +1,18 @@
+# BasicDeleteMonitorFlow
+
+main: kit: flow: BasicDeleteMonitorFlow:
+{
+  entity: "delete_monitor",
+  kind: "basic",
+  name: "BasicDeleteMonitorFlow",
+  step: [
+    {
+      i: {
+        ref: "delete_monitor_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicDeleteMonitorFlow"
+}

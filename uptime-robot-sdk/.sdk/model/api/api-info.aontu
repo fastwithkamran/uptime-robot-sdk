@@ -1,0 +1,21 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      description: "Lightweight API client for managing monitors via the [UptimeRobot API](https://uptimerobot.com/api/)."
+      servers: [
+        {
+          url: "https://api.uptimerobot.com/v2"
+        }
+      ]
+      summary: "Lightweight API client for managing monitors via the [UptimeRobot API](https://uptimerobot.com/api/)."
+      title: "UptimeRobot API"
+      version: "2.0.0"
+      website: "https://uptimerobot.com"
+    }
+  }
+}
+

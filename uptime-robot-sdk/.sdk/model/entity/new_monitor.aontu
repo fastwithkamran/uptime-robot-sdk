@@ -1,0 +1,86 @@
+# Entity: new_monitor
+
+main: kit: entity: new_monitor: {
+
+  alias: field: {}
+
+  fields: {
+    api_key: {
+      h: "Api Key"
+      n: "api_key"
+      r: true
+      t: "`$STRING`"
+    }
+    friendly_name: {
+      h: "Friendly Name"
+      n: "friendly_name"
+      r: true
+      t: "`$STRING`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      sh: "1 = HTTP(s), 2 = Keyword, 3 = Ping, 4 = Port"
+      t: "`$INTEGER`"
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "new_monitor"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /newMonitor"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/newMonitor"
+          rb: {
+            fields: [
+              {
+                name: "api_key"
+              }
+              {
+                name: "friendly_name"
+              }
+              {
+                name: "type"
+              }
+              {
+                name: "url"
+              }
+            ]
+            kind: "form"
+            media: "application/x-www-form-urlencoded"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "newMonitor"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

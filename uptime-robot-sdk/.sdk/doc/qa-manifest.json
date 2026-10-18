@@ -1,0 +1,18 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "1 = HTTP(s), 2 = Keyword, 3 = Ping, 4 = Port",
+      "Lightweight API client for managing monitors via the [UptimeRobot API](https://uptimerobot.com/api/).",
+      "Monitor created successfully",
+      "Monitor deleted successfully",
+      "Successful response containing monitor list",
+      "The ID of the monitor to delete",
+      "Your UptimeRobot API Key"
+    ]
+  }
+}

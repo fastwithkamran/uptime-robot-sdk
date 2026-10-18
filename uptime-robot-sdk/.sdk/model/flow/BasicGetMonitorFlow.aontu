@@ -1,0 +1,18 @@
+# BasicGetMonitorFlow
+
+main: kit: flow: BasicGetMonitorFlow:
+{
+  entity: "get_monitor",
+  kind: "basic",
+  name: "BasicGetMonitorFlow",
+  step: [
+    {
+      i: {
+        ref: "get_monitor_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicGetMonitorFlow"
+}

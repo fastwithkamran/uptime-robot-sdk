@@ -1,0 +1,73 @@
+# Entity: delete_monitor
+
+main: kit: entity: delete_monitor: {
+
+  alias: field: {}
+
+  fields: {
+    api_key: {
+      h: "Api Key"
+      n: "api_key"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "The ID of the monitor to delete"
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "delete_monitor"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /deleteMonitor"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/deleteMonitor"
+          rb: {
+            fields: [
+              {
+                name: "api_key"
+              }
+              {
+                name: "id"
+              }
+            ]
+            kind: "form"
+            media: "application/x-www-form-urlencoded"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "deleteMonitor"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

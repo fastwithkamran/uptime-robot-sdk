@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "new_monitor": {
+      "NEW_MONITOR00": {
+        "api_key": "s28",
+        "friendly_name": "s29",
+        "type": 42,
+        "url": "s2b",
+        "id": "NEW_MONITOR00"
+      },
+      "NEW_MONITOR01": {
+        "api_key": "s50",
+        "friendly_name": "s51",
+        "type": 82,
+        "url": "s53",
+        "id": "NEW_MONITOR01"
+      },
+      "NEW_MONITOR02": {
+        "api_key": "s78",
+        "friendly_name": "s79",
+        "type": 122,
+        "url": "s7b",
+        "id": "NEW_MONITOR02"
+      }
+    }
+  },
+  "new": {
+    "new_monitor": {
+      "new_monitor_ref01": {
+        "api_key": "sa0",
+        "friendly_name": "sa1",
+        "type": 162,
+        "url": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "POST /newMonitor": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "delete_monitor": {
+      "DELETE_MONITOR00": {
+        "api_key": "s14",
+        "id": "DELETE_MONITOR00"
+      },
+      "DELETE_MONITOR01": {
+        "api_key": "s28",
+        "id": "DELETE_MONITOR01"
+      },
+      "DELETE_MONITOR02": {
+        "api_key": "s3c",
+        "id": "DELETE_MONITOR02"
+      }
+    }
+  },
+  "new": {
+    "delete_monitor": {
+      "delete_monitor_ref01": {
+        "api_key": "s50"
+      }
+    }
+  },
+  "requests": {
+    "POST /deleteMonitor": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "get_monitor": {
+      "GET_MONITOR00": {
+        "api_key": "s14",
+        "format": "s15",
+        "id": "GET_MONITOR00"
+      },
+      "GET_MONITOR01": {
+        "api_key": "s28",
+        "format": "s29",
+        "id": "GET_MONITOR01"
+      },
+      "GET_MONITOR02": {
+        "api_key": "s3c",
+        "format": "s3d",
+        "id": "GET_MONITOR02"
+      }
+    }
+  },
+  "new": {
+    "get_monitor": {
+      "get_monitor_ref01": {
+        "api_key": "s50",
+        "format": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /getMonitors": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

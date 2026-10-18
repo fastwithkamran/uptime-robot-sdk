@@ -1,0 +1,68 @@
+# Entity: get_monitor
+
+main: kit: entity: get_monitor: {
+
+  alias: field: {}
+
+  fields: {
+    api_key: {
+      h: "Api Key"
+      n: "api_key"
+      r: true
+      sh: "Your UptimeRobot API Key"
+      t: "`$STRING`"
+    }
+    format: {
+      h: "Format"
+      n: "format"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "get_monitor"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /getMonitors"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/getMonitors"
+          rb: {
+            fields: [
+              {
+                name: "api_key"
+              }
+              {
+                name: "format"
+              }
+            ]
+            kind: "form"
+            media: "application/x-www-form-urlencoded"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "getMonitors"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

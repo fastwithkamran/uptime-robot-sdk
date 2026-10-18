@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: UptimeRobot API
+  version: 2.0.0
+  description: Lightweight API client for managing monitors via the [UptimeRobot API](https://uptimerobot.com/api/).
+servers:
+  - url: https://api.uptimerobot.com/v2
+paths:
+  /getMonitors:
+    post:
+      summary: Get Monitors
+      operationId: getMonitors
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - api_key
+              properties:
+                api_key:
+                  type: string
+                  description: Your UptimeRobot API Key
+                format:
+                  type: string
+                  default: json
+      responses:
+        '200':
+          description: Successful response containing monitor list
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /newMonitor:
+    post:
+      summary: Create Monitor
+      operationId: newMonitor
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - api_key
+                - friendly_name
+                - url
+                - type
+              properties:
+                api_key:
+                  type: string
+                friendly_name:
+                  type: string
+                url:
+                  type: string
+                type:
+                  type: integer
+                  description: 1 = HTTP(s), 2 = Keyword, 3 = Ping, 4 = Port
+      responses:
+        '200':
+          description: Monitor created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /deleteMonitor:
+    post:
+      summary: Delete Monitor
+      operationId: deleteMonitor
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - api_key
+                - id
+              properties:
+                api_key:
+                  type: string
+                id:
+                  type: integer
+                  description: The ID of the monitor to delete
+      responses:
+        '200':
+          description: Monitor deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
